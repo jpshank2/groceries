@@ -1,0 +1,37 @@
+.app {
+    text-align: center;
+}
+
+.link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.header {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-padding {
+    padding: 5px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.text-input {
+    flex: 10;
+}
+
+.submit-input {
+    flex: 2;
+}
+
+.centered {
+    text-align: center;
+}
