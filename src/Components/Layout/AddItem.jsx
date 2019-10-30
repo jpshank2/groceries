@@ -13,6 +13,7 @@ export class AddItem extends Component {
         e.preventDefault();
         this.props.item(this.state.title);
         this.setState({title: ""});
+        e.target.reset()
     }
 
     onChange = (e) => {

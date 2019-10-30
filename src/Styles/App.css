@@ -35,3 +35,20 @@ form {
 .centered {
     text-align: center;
 }
+
+.inline {
+    display: inline;
+}
+
+.item {
+    text-align: center;
+    padding: 5;
+    display: inline-block;
+    width: 300px;
+    
+}
+
+.item-box {
+    text-align: center;
+    border-bottom: 1px dotted black;
+}
