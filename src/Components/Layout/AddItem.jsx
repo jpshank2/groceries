@@ -5,14 +5,13 @@ export class AddItem extends Component {
         super(props);
 
         this.state = {
-            title: "",
-            items: []
+            title: ""
         };
     }
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.items(this.state.title);
+        this.props.item(this.state.title);
         this.setState({title: ""});
     }
 
