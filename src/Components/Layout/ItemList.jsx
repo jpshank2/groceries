@@ -5,7 +5,7 @@ export class ItemList extends Component {
     render() {
         return this.props.items.map((item) => (
             <Items key={item.key} item={item} edit={this.props.edit} markComplete={this.props.markComplete}
-            delItem={this.props.delItem}/>
+            delItem={this.props.delItem} changing={this.props.changing} />
         ))
     }
 }

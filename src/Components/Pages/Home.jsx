@@ -7,7 +7,8 @@ export class Home extends Component {
         super(props);
 
         this.state = {
-            items: []
+            items: [],
+            editing: false
         }
     }
     
@@ -25,9 +26,19 @@ export class Home extends Component {
     edit = (key) => {
         this.setState({items: this.state.items.map((item) => {
             if(item.key === key) {
-            item.editing = true;
+                item.editing = true;
             }
             return item;
+        })})
+    }
+
+    changing = (newTitle) => {
+        this.setState({items: this.state.items.map((item) => {
+            if (item.editing === true) {
+                item.title = newTitle;
+                item.editing = false;
+            }
+            return item
         })})
     }
 
@@ -49,7 +60,7 @@ export class Home extends Component {
             <React.Fragment>
                 <AddItem item={this.addItem} />
                 <ItemList items={this.state.items} markComplete={this.markComplete}
-                    delItem={this.delItem} /*edit={this.edit}*/ />
+                    delItem={this.delItem} edit={this.edit} changing={this.changing}/>
             </React.Fragment>
         )
     }
